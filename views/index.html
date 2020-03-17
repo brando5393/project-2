@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="./views/index.html">Dev Forum 2.0</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> Menu
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -51,11 +51,55 @@
         <header>
         </header>
         <main>
-            <div class="category-container">
-                
+            <div class="row">
+                <div class="col-12">
+                    <div class="category-container">
+                        
+                    </div>
+                </div>
             </div>
-            <div class="news-container">
-
+            <div class="row">
+                <div class="col-8">
+                    <div class="news-container">
+                        <div class="card">
+                            <h5 class="card-header">Whats New In Tech</h5>
+                            <div class="card-body">
+                                <div id="news-display"></div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-4 col-sm-12">
+                    <div id="search-container">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="searchTermEntry">Search Terms:</label>
+                                <input type="text" class="form-control" id="searchTermEntry" aria-describedby="termsHelp" required>
+                                <small id="termsHelp" class="form-text text-muted">Looking for something specific enter your search term(s) here.</small>
+                              </div>
+                              <div class="form-group">
+                                  <label for="categorySelect">Search In A Category:</label>
+                              <select class="form-control" id="categorySelect" aria-describedby="categoryHelp">
+                                <option value="" selected></option>
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="javascript">Javascript</option>
+                                <option value="node">Node</option>
+                                <option value="react">React</option>
+                                <option value="databases">Databases</option>
+                              </select>
+                              <small id="categoryHelp" class="form-text text-muted">Select an option to search in a particular forum category. </small>
+                            </div>
+                            <div class="form-group">
+                                <label for="authorSearch">Search Specific User:</label>
+                                <input type="text" class="form-control" id="userSearch" aria-describedby="userHelp">
+                                <small id="userHelp" class="form-text text-muted">If you wish to search for posts from a specific author you can enter their username here. </small>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-lg" id="search-btn">Search</button>
+                            <button type="reset" class="btn btn-danger btn-lg">Reset</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
