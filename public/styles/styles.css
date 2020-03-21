@@ -1,3 +1,33 @@
+<<<<<<< HEAD
 .list-group-item {
   line-height: 2.5;
 }
+=======
+
+body{
+  background-image: linear-gradient(to bottom right, #2F4F4F, #778899, #808080, #696969);
+}
+
+.category-card{
+  margin-bottom: 15px;
+}
+
+.category-container{
+  text-align: center;
+}
+
+.category-img{
+  height: auto;
+  width: 100px;
+  display: block !important;
+  /* text-align: center !important; */
+}
+
+.container{
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+>>>>>>> 5ee0a8922810705a15ded318628b3015cf4c3a1f
