@@ -1,5 +1,5 @@
 var myAPI = "gqwrl6BDOR2rKmQC0A9fgypbxgCazUrk";
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=technology&fq=progamming&api-key=" + myAPI;
+var queryURL = "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=" + myAPI;
 console.log(queryURL);
 
 $.ajax({
@@ -8,28 +8,34 @@ method: "GET"
 })
 .then(function(res){
 console.log(res);
-console.log(res.response.docs);
-var articleArray = res.response.docs;
+console.log(res.results);
+
+var articleArray = res.results;
 
 for(var i = 0; i < 5; i++) {
-
+    
+    
     console.log(articleArray[i]);
 
-    var articleURL = articleArray[i].web_url;
-    var byline = articleArray[i].byline.original;
-    var pub_date = articleArray[i].pub_date;
-    var headline = articleArray[i].headline.main;
-    var paragraph = articleArray[i].lead_paragraph;
-    var source = articleArray[i].source;
+    var articleURL = $("<a>").attr("href", articleArray[i].url);
+    var byline = $("<h5>").text(articleArray[i].byline);
+    var pub_date = $("<h5>").text(articleArray[i].published_date);             
+    var title = $("<h3>").text(articleArray[i].title);
+    var abstract = $("<h4>").text(articleArray[i].abstract);
+    var source = $("<h5>").text(articleArray[i].source);
 
-    var results = $("<h5>").html(articleURL + byline + pub_date + headline + paragraph + source);
 
-    console.log(results);
+    newDate = moment(pub_date).format('YYYY-MM-DD');
 
-    $("#news-display").append(results);
-
+    $("#news-display").append(articleURL);
+    $("#news-display").append(title);
+    $("#news-display").append(abstract);
+    $("#news-display").append(byline);
+    $("#news-display").append(newDate);
+    $("#news-display").append(source);
+    $("#news-display").append("<br>");
+   
 
 }
-
 
 })
