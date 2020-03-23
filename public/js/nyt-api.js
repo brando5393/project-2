@@ -17,7 +17,7 @@ for(var i = 0; i < 5; i++) {
     
     console.log(articleArray[i]);
 
-    var articleURL = $("<a>").attr("href", articleArray[i].url);
+    var articleURL = $("<a>").attr("href", articleArray[i].url).text(articleArray[i].url);
     var byline = $("<h5>").text(articleArray[i].byline);
     var pub_date = $("<h5>").text(articleArray[i].published_date);             
     var title = $("<h3>").text(articleArray[i].title);
@@ -27,8 +27,8 @@ for(var i = 0; i < 5; i++) {
 
     newDate = moment(pub_date).format('YYYY-MM-DD');
 
-    $("#news-display").append(articleURL);
     $("#news-display").append(title);
+    $("#news-display").append(articleURL);
     $("#news-display").append(abstract);
     $("#news-display").append(byline);
     $("#news-display").append(newDate);
