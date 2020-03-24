@@ -1,11 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
         id: {
-<<<<<<< HEAD
-            type: DataTypes.INTEGER,
-=======
             type: sequelize.INTEGER,
->>>>>>> 070c21fb55c79f2f7e8f994a0ea9a97eb2a62086
             autoIncrement: true,
             primaryKey: true
         },
@@ -20,11 +16,7 @@ module.exports = function(sequelize, DataTypes) {
             }    
         },
         password: {
-<<<<<<< HEAD
-            type: DataTypes.STRING,
-=======
             type: DataTypes.Text,
->>>>>>> 070c21fb55c79f2f7e8f994a0ea9a97eb2a62086
             allowNull: false,
             validate: {
                 len:{
@@ -34,15 +26,9 @@ module.exports = function(sequelize, DataTypes) {
             }
         }, 
         Email: {
-<<<<<<< HEAD
-            type: DataTypes.TEXT,
-            allowNull: false,
-            //unique: true,
-=======
             type: sequelize.TEXT,
             allowNull: false,
             unique: true,
->>>>>>> 070c21fb55c79f2f7e8f994a0ea9a97eb2a62086
             validate: {
                 len: {
                     args: [10, 40], 
@@ -62,9 +48,5 @@ module.exports = function(sequelize, DataTypes) {
         });
     };
     return User;
-<<<<<<< HEAD
-};
-=======
   };
->>>>>>> 070c21fb55c79f2f7e8f994a0ea9a97eb2a62086
   
