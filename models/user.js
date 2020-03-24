@@ -28,7 +28,7 @@ module.exports = function(sequelize, DataTypes) {
         Email: {
             type: DataTypes.TEXT,
             allowNull: false,
-            unique: true,
+            //unique: true,
             validate: {
                 len: {
                     args: [10, 40], 
