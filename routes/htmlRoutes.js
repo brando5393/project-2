@@ -1,3 +1,4 @@
+
 var db = require("../models");
 
 // module.exports = function(app) {
@@ -51,4 +52,5 @@ module.exports = function(app){
   app.get('/databases', (req,res) =>{
     res.sendFile(path.join(__dirname, "../views/databaseforum.html"));
   });
+
 }
