@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
         id: {
-            type: sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         }, 
         Email: {
-            type: sequelize.TEXT,
+            type: DataTypes.TEXT,
             allowNull: false,
             unique: true,
             validate: {
@@ -34,9 +34,9 @@ module.exports = function(sequelize, DataTypes) {
                     args: [10, 40], 
                     msg: "Email must be between 10 and 40 characters",
                 },
-                isEmail: {
-                    msg: "Email address must be valid"
-                }
+                // isEmail: {
+                //     msg: "Email address must be valid"
+                // }
             }
         }
          
