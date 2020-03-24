@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
             }    
         },
         password: {
-            type: DataTypes.Text,
+            type: DataTypes.TEXT,
             allowNull: false,
             validate: {
                 len:{
