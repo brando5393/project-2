@@ -13,7 +13,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="./views/index.html">Dev Forum 2.0</a>
+        <a class="navbar-brand" href="/">Dev Forum 2.0</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> Menu
             <span class="navbar-toggler-icon"></span>
@@ -22,37 +22,64 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HTML</a>
+                    <a class="nav-link" href="/html">HTML</a>
                 </li>
                 <li class="nav-item">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CSS</a>
+                        <a class="nav-link" href="/css">CSS</a>
                     </li>
-                    <a class="nav-link" href="#">JavaScript</a>
+                    <a class="nav-link" href="/javascript">JavaScript</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Node</a>
+                    <a class="nav-link" href="/node">Node</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">React</a>
+                    <a class="nav-link" href="/react">React</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Databases</a>
+                    <a class="nav-link" href="/databases">Databases</a>
                 </li>
 
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sign Up/Sign In</a>
+                    <a class="nav-link" href="/register">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Sign In</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container">
         <header>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Dev Forum 2.0 | Login</h1>
+                        <p class="lead">Welcome back, glad to see you again</p>
+                      </div>
+                </div>
+            </div>
         </header>
         <main>
-            
+            <div class="row">
+                <div class="col-lg-12">
+                    <form>
+                        <div class="form-group">
+                          <label for="email">E-mail:</label>
+                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                          <small id="emailHelp" class="form-text text-muted">Please enter the e-mail address associated with your account.</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Password:</label>
+                          <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" required>
+                          <small id="passwordHelp" class="form-text text-muted">Please enter your password</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="register-btn">Login</button>
+                      </form>
+                </div>
+            </div>
         </main>
     </div>
     <footer>
