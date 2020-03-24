@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 body{
   background-image: linear-gradient(to bottom right, #2F4F4F, #778899, #808080, #696969);
@@ -25,3 +26,8 @@ body{
   padding-top: 5px;
   padding-bottom: 5px;
 }
+=======
+.list-group-item {
+  line-height: 2.5;
+}
+>>>>>>> master

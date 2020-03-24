@@ -1,7 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
         id: {
+<<<<<<< HEAD
             type: sequelize.INTEGER,
+=======
+            type: DataTypes.INTEGER,
+>>>>>>> master
             autoIncrement: true,
             primaryKey: true
         },
@@ -16,7 +20,11 @@ module.exports = function(sequelize, DataTypes) {
             }    
         },
         password: {
+<<<<<<< HEAD
             type: DataTypes.Text,
+=======
+            type: DataTypes.STRING,
+>>>>>>> master
             allowNull: false,
             validate: {
                 len:{
@@ -26,9 +34,15 @@ module.exports = function(sequelize, DataTypes) {
             }
         }, 
         Email: {
+<<<<<<< HEAD
             type: sequelize.TEXT,
             allowNull: false,
             unique: true,
+=======
+            type: DataTypes.TEXT,
+            allowNull: false,
+            //unique: true,
+>>>>>>> master
             validate: {
                 len: {
                     args: [10, 40], 
@@ -48,5 +62,9 @@ module.exports = function(sequelize, DataTypes) {
         });
     };
     return User;
+<<<<<<< HEAD
   };
+=======
+};
+>>>>>>> master
   

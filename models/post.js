@@ -21,7 +21,11 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Post.associate = function(models) {
+<<<<<<< HEAD
         Post.belongsTo(models,Author, {
+=======
+        Post.belongsTo(models.User, {
+>>>>>>> master
             foreignKey: {
                 allowNull: false
             }
