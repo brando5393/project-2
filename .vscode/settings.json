@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 {
     "eslint.enable": false
+=======
+{
+    "eslint.enable": false
+>>>>>>> 8f41e51feddb8129e08c2e04b5a349fc5de0410a
 }
