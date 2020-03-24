@@ -1,5 +1,6 @@
 var db = require("../models");
 const bcrypt = require("bcrypt");
+const passport = require("passport");
 
 module.exports = function(app) {
     //Route for getting all posts
@@ -122,4 +123,4 @@ module.exports = function(app) {
 
 
 
-}; 
+}); 
