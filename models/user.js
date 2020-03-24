@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
             }    
         },
         password: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
             validate: {
                 len:{
@@ -34,9 +34,9 @@ module.exports = function(sequelize, DataTypes) {
                     args: [10, 40], 
                     msg: "Email must be between 10 and 40 characters",
                 },
-                isEmail: {
-                    msg: "Email address must be valid"
-                }
+                // isEmail: {
+                //     msg: "Email address must be valid"
+                // }
             }
         }
          
@@ -48,5 +48,7 @@ module.exports = function(sequelize, DataTypes) {
         });
     };
     return User;
+
 };
+
   

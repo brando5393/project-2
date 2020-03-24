@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-.list-group-item {
-  line-height: 2.5;
-}
-=======
+
 
 body{
   background-image: linear-gradient(to bottom right, #2F4F4F, #778899, #808080, #696969);
@@ -30,4 +26,7 @@ body{
   padding-top: 5px;
   padding-bottom: 5px;
 }
->>>>>>> 5ee0a8922810705a15ded318628b3015cf4c3a1f
+
+.list-group-item {
+  line-height: 2.5;
+}
