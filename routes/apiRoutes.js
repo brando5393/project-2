@@ -43,6 +43,21 @@ module.exports = function(app) {
     }
   })
 
+  passport.use(new LocalStrategy(
+    function(email, password, done) {
+      User.findOne({ email: email }, function (err, user) {
+        if (err) { return done(err); }
+        if (!user) { return done(null, false); }
+        if (!user.verifyPassword(password)) { return done(null, false); }
+        return done(null, user);
+      });
+    }
+  ));  
+
+  app.post('/login', passport.authenticate('local', {failureRedirect: '/login'}), (req, res) =>{
+    res.redirect('/');
+  });
+
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
