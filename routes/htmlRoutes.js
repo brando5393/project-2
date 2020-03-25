@@ -33,24 +33,8 @@ module.exports = function(app){
     res.sendFile(path.join(__dirname, "../views/index.html"));
   });
 
-  app.get('/html', (req,res) =>{
-    res.sendFile(path.join(__dirname, "../views/htmlforum.html"));
-  });
-
-  app.get('/css', (req,res) =>{
-    res.sendFile(path.join(__dirname, "../views/cssforum.html"));
-  });
-  app.get('/javascript', (req,res) =>{
-    res.sendFile(path.join(__dirname, "../views/javascriptforum.html"));
-  });
-  app.get('/node', (req,res) =>{
-    res.sendFile(path.join(__dirname, "../views/nodeforum.html"));
-  });
-  app.get('/react', (req,res) =>{
-    res.sendFile(path.join(__dirname, "../views/reactforum.html"));
-  });
-  app.get('/databases', (req,res) =>{
-    res.sendFile(path.join(__dirname, "../views/databaseforum.html"));
+  app.get('/post', (req,res) =>{
+    res.sendFile(path.join(__dirname, "../views/post.html"));
   });
 
 }
