@@ -70,17 +70,17 @@
                     <form action="/register" method="POST">
                         <div class="form-group">
                           <label for="name">Name:</label>
-                          <input type="text" class="form-control" id="name" aria-describedby="nameHelp" required>
+                          <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp" required>
                           <small id="nameHelp" class="form-text text-muted">Please enter your name</small>
                         </div>
                         <div class="form-group">
                           <label for="email">E-mail:</label>
-                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                          <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
                           <small id="emailHelp" class="form-text text-muted">Please enter a valid e-mail address</small>
                         </div>
                         <div class="form-group">
                           <label for="password">Password:</label>
-                          <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" required>
+                          <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp" required>
                           <small id="passwordHelp" class="form-text text-muted">Please enter a password that you will remember</small>
                         </div>
                         <button type="submit" class="btn btn-primary" id="register-btn">Register</button>
