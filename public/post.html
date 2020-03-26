@@ -64,8 +64,18 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1><span id="category-display"></span> Posts</h1>
-                    <div id="posts-container">
-                        <!-- posts will be placed in here as they are generated -->
+                    <div id="link-container" style="visibility: visible;">
+
+                    </div>
+                    
+                    <div id="posts-container" style="visibility: hidden;">
+                        <div class="card">
+                            <h5 class="card-header"><span id="post-title"></span></h5>
+                            <div class="card-body">
+                              <p class="card-text"><span id="post-content"></span></p>
+                              <a href="#" class="btn btn-primary" id="close-btn">Close View</a>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </div>
