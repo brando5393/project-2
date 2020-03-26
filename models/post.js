@@ -15,8 +15,8 @@ module.exports = function(sequelize, DataTypes) {
             }
         }, 
         category: {
-            type: DataTypes.STRING, 
-            defaultValue: "random"
+            type: DataTypes.ENUM, 
+            values: ['CSS', 'JavaScript', 'Node', 'React', 'HTML', 'DataBase']
         } 
     });
 
