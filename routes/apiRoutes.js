@@ -59,6 +59,8 @@ module.exports = function (app) {
         email: req.body.email
       };
 
+      console.log(hashedPassword);
+
       // push newUser to DB
       db.user.create({
         name: newUser.name,
