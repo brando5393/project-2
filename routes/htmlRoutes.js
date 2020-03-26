@@ -1,5 +1,6 @@
 
 var db = require("../models");
+var path = require("path");
 
 // module.exports = function(app) {
 //   // Load index page
@@ -30,11 +31,14 @@ var db = require("../models");
 module.exports = function(app){
   // index route
   app.get('/', (req,res) =>{
-    res.sendFile(path.join(__dirname, "../views/index.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   app.get('/post', (req,res) =>{
-    res.sendFile(path.join(__dirname, "../views/post.html"));
+    res.sendFile(path.join(__dirname, "../public/post.html"));
   });
-
+  
+  app.get('/form', (req,res) =>{
+    res.sendFile(path.join(__dirname, "../public/createpost.html"));
+  });
 }

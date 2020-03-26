@@ -17,6 +17,15 @@ $(document).ready(() =>{
     };
   });
 
+
+  // $("#create-button").on("click", function(event){
+  //   event.preventDefault();
+  //   let postTitle = $("#post-title").val().trim();
+  //   let postAuthor = $("#post-author").val().trim();
+  //   let category = $("#category-select").val();
+
+  // })
+
   $(".enter-btn").on("click", function(){
     let categoryValue = this.val();
     res.redirect("/post");
