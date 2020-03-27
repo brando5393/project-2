@@ -28,8 +28,7 @@ $(document).ready(() =>{
 
   $(".enter-btn").on("click", function(event){
     event.preventDefault();
-    let categoryValue = this.val();
-    localStorage.setItem("category", categoryValue);
+    window.localStorage.setItem("category", $(".enter-btn").val());
     window.location.href="/post";
     
 }); 

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#category-display").text(window.localStorage.getItem(category));
     
     function getPosts(){
         $.get("/api/posts", function(response){
@@ -17,7 +18,7 @@ $(document).ready(function(){
                $.ajax({
                    url: "/api/post",
                    type: GET,
-                   data: localStorage.getItem(category)
+                   data: window.localStorage.getItem(category)
 
                }).then(getPosts);
              $("#post-container").append(postCard, postTitle, cardBody, cardText);
