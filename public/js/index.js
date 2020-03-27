@@ -23,12 +23,14 @@ $(document).ready(() =>{
   //   let postTitle = $("#post-title").val().trim();
   //   let postAuthor = $("#post-author").val().trim();
   //   let category = $("#category-select").val();
-
   // })
 
   $(".enter-btn").on("click", function(event){
     event.preventDefault();
-    window.localStorage.setItem("category", $(".enter-btn").val());
+    let buttonValue = $(".enter-btn").val();
+    console.log(buttonValue);
+    window.localStorage.setItem("category", buttonValue);
+    console.log(window.localStorage.category);
     window.location.href="/post";
     
 }); 
